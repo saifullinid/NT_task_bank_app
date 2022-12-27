@@ -1,0 +1,9 @@
+.git
+.idea
+.pytest_cache
+__pycache__
+venv
+Dockerfile
+docker_db
+start_containers
+stop_containers
