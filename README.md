@@ -15,11 +15,15 @@ bank client-registration --client=<'client_name'>
 Удаление пользователя:  
 bank client-delete --client=<'client_name'>  
 Пополнение счета на сумму:  
-bank deposit --client=<'client_name'> --amount=<amount> --description=<'description'>  
+bank deposit --client=<'client_name'> --amount=<'amount'> --description=<'description'>  
 Снятие со счета суммы:  
-bank withdraw --client=<'client_name'> --amount=<amount> --description=<'description'>  
+bank withdraw --client=<'client_name'> --amount=<'amount'> --description=<'description'>  
 Состояние счета по датам:  
 bank show-bank-statement --client=<'client_name'> --since=<'date'> --till=<'date'>  
-5. Перед выполнением каждой команды будет запрашиваться пароль пользователя, который указан при регистрации.
-6. Тесты можно запустить командой:  
+5. Типы входных данных:  
+client: str ('John')  
+amount: str ('1000', '1000.50'; далее выполнится преобразование типов с проверкой)  
+date: str (формат: 'YYYY-MM-DD HH:MM:SS')  
+6. Перед выполнением каждой команды будет запрашиваться пароль пользователя, который указан при регистрации.
+7. Тесты можно запустить командой:  
 pytest tests
